@@ -1,0 +1,82 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
+padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+margin: 0;
+}
+
+ul[class] {
+list-style: none;
+}
+
+img {
+max-width: 100%;
+display: block;
+}
+
+input,
+button,
+textarea,
+select {
+font: inherit;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    min-height: 100vh;
+    @extend %pn-bold;
+    font-weight: 700;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 22px;
+    color: $primaryText;
+    background: $bg;
+}
+.container{
+    width: 1850px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.title{
+    font-size: 48px;
+    line-height: 60px;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 50px;
+        background-color: $acent;
+        top: 3px;
+        z-index: -1;
+    }
+}
